@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation learning site</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        form{
+            max-width:400px;
+            margin:0 auto;
+            background-color:red;
+        }
+        .submit{
+            width:100%;
+        }
+        .wrapper{
+            padding: 1rem;
+            display: flex;
+    /* padding-inline: 2rem; */
+            gap: 1rem;
+            flex-direction: column;
+
+        }
+        input[type="email"]{
+            width:75%;
+        }
+        input[type="password"]{
+            width:76%;
+        }
+        /* #h1{
+            display:none;
+        } */
+        </style>
+</head>
+<body>
+    <form id="form">
+       <div class="wrapper">
+           <div class="email">
+               <label id="username">Username:</label>
+               <input type="email"  id="username" class="user">
+           </div>
+           <div class="password">
+               <label id="password">Password:</label>
+               <input type="password"  id="password" class="pass">
+           </div>
+       </div>
+       <input type="submit" value="Login In" id="submit" class="submit">
+   </form>
+   <h1 id="h1">welcome To instagram</h1>
+   <script src="database.js"></script>
+</body>
+</html>  
