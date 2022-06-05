@@ -53,14 +53,23 @@ request.onsuccess = () => {
     Btn.onsubmit = (e) => {
         e.preventDefault()
         let user = document.querySelector(".user").value
-        // window.location.href="index.html"
-        clearPost('post')
-        addPost("post", { user, food: "beans" })
+
+            clearPost('post')
+            addPost("post", { user, food: "beans" })
+            
         
+       
+        // window.location.href="index.html"
+
     }
-    let head= document.getElementById('h1')
-    let myPost = getPost("post")
-    myPost.then(data => {
-        head.textContent= data[0].user
+
+
+     let head= document.getElementById('h1')
+            let myPost = getPost("post")
+            console.log(myPost)
+            myPost.then(data => {
+                head.innerHTML=`<h1> ${data[0]? data[0].user : 'hello world'} </h1>`
+       
     })
+    
 }
