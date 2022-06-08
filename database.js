@@ -1,9 +1,10 @@
-let request = indexedDB.open("instagram", 2);
+let request = indexedDB.open("instagram", 3);
 
 request.onupgradeneeded = () => {
     console.log("upgrading....")
     let db = request.result;
     db.createObjectStore("post" , {autoIncrement: true})
+    db.createObjectStore("picture" , {autoIncrement: true})
 }
 
 
@@ -53,23 +54,20 @@ request.onsuccess = () => {
     Btn.onsubmit = (e) => {
         e.preventDefault()
         let user = document.querySelector(".user").value
+        let pass = document.querySelector(".pass").value
 
+          if (user === "" || pass === "") {
+            alert('Error')
+        } 
+        else if (pass === user.substring(0, 5)) {
+            
             clearPost('post')
             addPost("post", { user, food: "beans" })
-            
-        
        
-        // window.location.href="index.html"
+            window.location.href="index.html"
+        }
 
+         
     }
-
-
-     let head= document.getElementById('h1')
-            let myPost = getPost("post")
-            console.log(myPost)
-            myPost.then(data => {
-                head.innerHTML=`<h1> ${data[0]? data[0].user : 'hello world'} </h1>`
-       
-    })
     
 }
