@@ -64,7 +64,7 @@ request.onsuccess = () => {
             clearPost('post')
             addPost("post", { user, food: "beans" })
        
-            window.location.href="index.html"
+            window.location.href="new.html"
         }
 
          
