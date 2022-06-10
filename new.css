@@ -28,7 +28,7 @@ h2 {
   width: 112px;
 }
 @media (min-width: 768px) {
-  .first {
+  .status {
     overflow-x: hidden;
   }
   .prof {
