@@ -28,6 +28,12 @@ h2 {
   width: 112px;
 }
 @media (min-width: 768px) {
+  .insta {
+    width: 9rem;
+  }
+  .fa-2x {
+    font-size: 2rem;
+  }
   .status {
     overflow-x: hidden;
   }
@@ -38,6 +44,17 @@ h2 {
     min-height: 59px;
   }
   .large {
-    margin-left: 9rem;
+    margin-left: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .insta {
+    width: 12rem;
+  }
+  .fa-2x {
+    font-size: 2.5rem;
+  }
+  .large {
+    margin-left: 7rem;
   }
 }
