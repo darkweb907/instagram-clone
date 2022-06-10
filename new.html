@@ -6,28 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min.css">
-
-    <style>
-        h1{
-            background-image:linear-gradient(90deg,rgba(2,0,36,1) 0%, rgba(0,0,0,0.545248873093549) 39%, rgba(0,212,255,1) 100%);
-            display:inline-block;
-            -webkit-background-clip: text;
-            color: transparent;
-            font-weight: bolder;
-            font-size:2.5rem;
-            font-family: sans-serif;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="new.css">
 </head>
 <body>
+    <header class="py-3 shadow-lg">
+        <div class="container-lg">
+           <nav class="d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <a href="#"><img src="img/instagram.png" alt="" class="img-fluid insta"></a>
+                </div>
+                <div class="search d-none d-md-flex position-relative">
+                <i class="fa fa-1x fa-search align-self-center position-absolute" style="left: 12px;"></i>
+                  <div class="col-12">
+                        <input type="search" class="form-control" placeholder="Search">
+                  </div>
+                </div>
+                <div class="icon d-flex gap-lg-5 gap-3">
+                <i class="fa fa-2x fa-home bg"></i>
+                <i class="fa fa-2x fa-comment bg"></i>
+                <i class="fa fa-2x fa-compass"></i>
+                <i class="fa fa-2x fa-heart-o"></i>
+                <i class="fa fa-2x fa-user-circle"></i>
+                </div>
+           </nav>
+        </div>
+    </header>
+    <main class="mt-3">
+        <section class="first mt-5">
+            <div class="container">
+                <div class="profile d-flex gap-3  align-items-center px-md-5 ">
+                    <div class="photo">
+                        <label for="prof">
+                            <img src="img/marcos-paulo-prado-QYVCzK-bnYU-unsplash.jpg" alt="" class="img-fluid prof"
+                                width="90">
+                        </label>
+                        <input type="file" class="d-none" id="prof">
+                        <h2 class="text-nowrap d-md-none" >Wf darkweb</h2>
+                    </div>
+                    <div class="status d-md-none  mr-5">
+                        <div class="ms-1">
+                            <div class="d-flex align-items-center  gap-5 mb-4">
+                                <h3 class="text-nowrap">Maria Butters</h3>
+                                <i class="fa fa-3x fa-gear bg"></i>
+                            </div>
+                            
+                            <button class="btn w-100 btn-outline-dark d-block">Edit profile</button>
+                        </div>
+                        
+                    </div>
+                    <div class="large d-none  d-md-block">
+                        <div class="d-flex gap-5 my-3 align-items-center">
+                            <h2 class="fw-light">wf5385</h2>
+                            <button class="btn btn-outline-dark">Edit profile</button>
+                            <i class="fa fa-3x fa-gear bg"></i>
+                        </div>
+                        <div class="d-flex gap-5 mb-3">
+                            <h4 >0 <span class="fw-normal">post</span></h4>
+                            <h4>0 <span class="fw-normal">post</span></h4>
+                            <h4>0 <span class="fw-normal">post</span></h4>
+                        </div>
+                        <h2 class="text-nowrap wf fw-normal">Wf darkweb</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi labore laudantium excepturi obcaecati cum, accusamus adipisci\
+            , nostrum eum itaque quis possimus provident dolore cupiditate, ducimus molestias. Sit, ullam nesciunt?</p>
+
+            <button class="done">click</button>
+    </div> -->
+
+    <!-- <div>
+        <h3>Getting there soon Boss</h3>
+    <button class="done">click 1</button>
+
+    </div>
+
     <h1 id="good">good Morning guys</h1>
-    <div id="h1" ></div>
-    <input type="file" id="files">
+    <div id="h1" ></div> -->
+    <!-- <input type="file" id="files"> -->
     <script src="database.js"></script>
-    <div id="put" class="row">
+    <!-- <div id="put" class="row"> -->
     </div>
     <script>
+        let bags=document.querySelectorAll(".done");
+
+        bags.forEach(function(bag){
+            bag.addEventListener("click",function(e){
+                console.log(e.target.parentElement.innerHTML);
+            });
+        });
+
+
+
+
+        // practice hshsg
+
         let folder=document.getElementById("files")
         let add=document.getElementById("put")
         
