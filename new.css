@@ -63,7 +63,7 @@ h2 {
 
 @media (min-width: 768px) {
   .w-30 {
-    width: 40%;
+    width: 66%;
   }
   .first {
     margin: 5rem 0;
@@ -91,6 +91,9 @@ h2 {
   }
 }
 @media (min-width: 992px) {
+  .w-30 {
+    width: 37%;
+  }
   .fa-1x {
     font-size: 1.3rem;
     color: rgb(142, 142, 142);
