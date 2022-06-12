@@ -38,9 +38,11 @@ h2 {
 }
 .w-30 {
   width: 90%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: -30px;
+  left: 50px;
+  right: 50px;
+  transform: translateX(-50px);
+  animation: slideDown 1s ease-in-out forwards;
 }
 .pull {
   cursor: pointer;
@@ -49,6 +51,16 @@ h2 {
   opacity: 0.3;
   border-radius: 50%;
 }
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
 @media (min-width: 768px) {
   .w-30 {
     width: 40%;
