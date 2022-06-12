@@ -39,7 +39,7 @@ h2 {
 .w-30 {
   width: 90%;
   top: -30px;
-  left: 15px;
+  left: 17px;
   animation: slideDown 1s ease-in-out forwards;
 }
 .pull {
