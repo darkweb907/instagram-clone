@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <link rel="stylesheet" href="new.css">
 </head>
@@ -34,7 +35,7 @@
         </div>
     </header>
     <main class="mt-3">
-        <section class="first mt-5">
+        <section class="first">
             <div class="container">
                 <div class="profile d-flex gap-3  align-items-center px-md-5 ">
                     <div class="photo">
@@ -43,12 +44,12 @@
                                 width="90">
                         </label>
                         <input type="file" class="d-none" id="prof">
-                        <h2 class="text-nowrap d-md-none" >Wf darkweb</h2>
+                        <h2 class="text-nowrap d-md-none wft"  >Wf darkweb</h2>
                     </div>
                     <div class="status d-md-none  mr-5">
                         <div class="ms-1">
                             <div class="d-flex align-items-center  gap-1 gap-md-5 mb-4">
-                                <h3 class="text-nowrap">Maria Butters</h3>
+                                <h3 class="text-nowrap" id="h1">Maria Butters</h3>
                                 <i class="fa fa-2x fa-gear bg ms-2"></i>
                             </div>
                             
@@ -58,81 +59,105 @@
                     </div>
                     <div class="large d-none  d-md-block">
                         <div class="d-flex gap-5 my-3 align-items-center">
-                            <h2 class="fw-light">wf5385</h2>
+                            <h2 class="fw-light wft">wf5385</h2>
                             <button class="btn btn-outline-dark">Edit profile</button>
-                            <i class="fa fa-3x fa-gear bg"></i>
+                            <i class="fa fa-3x fa-gear bg" id="good"></i>
                         </div>
                         <div class="d-flex gap-5 mb-3">
                             <h4 >0 <span class="fw-normal">post</span></h4>
                             <h4>0 <span class="fw-normal">post</span></h4>
                             <h4>0 <span class="fw-normal">post</span></h4>
                         </div>
-                        <h2 class="text-nowrap wf fw-normal">Wf darkweb</h2>
+                        <h2 class="text-nowrap wf fw-normal" id="h1">Wf darkweb</h2>
                         
                     </div>
                 </div>
             </div>
         </section>
+        <section class="second mt-4">
+            <div class="container-md">
+                <hr>
+                <div class="d-flex justify-content-center gap-5 align-items-center mt-4">
+                    <div class="post d-flex align-items-center gap-3">
+                        <i class="fa fa-plus-square-o fa-2x"></i>
+                        <h4 class="fw-light">Post</h3>
+                    </div>
+                    <div class="saved d-flex align-items-center gap-3">
+                        <i class="fa fa-bookmark fa-2x"></i>
+                        <h4 class="fw-light">Saved</h3>
+                    </div>
+                    <div class="tagged d-flex align-items-center gap-3">
+                        <i class="fa fa-hashtag fa-2x"></i>
+                        <h4 class="fw-light ">Tagged</h3>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </section>
+        <section class="grid position-relative">
+           <div class="container">
+                <div class="img  ter position-absolute end-0 top-50" style="transform: translateY(-50%);">
+                    <label for="put" id="came" class="pull">
+                        <i class="fa fa-5x fa-camera"></i>
+                    </label>
+                    <input type="file" id="put" class="put d-none">
+                </div>
+                <div class="row" id="pit"></div>
+           </div>
+        </section>
+
+        <form class="border border-2 p-3 border-dark position-absolute w-30 mx-auto"   data-aos="fade-top"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500">
+            
+                <input type="text"  id="" placeholder="UserName" class="form-control mb-3">
+                <input type="password"  id="" placeholder="Password" class="form-control mb-3">
+                <input type="submit" value="Submit" class="w-100 py-2 btn-outline-primary">
+            
+        </form>
     </main>
-    <!-- <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi labore laudantium excepturi obcaecati cum, accusamus adipisci\
-            , nostrum eum itaque quis possimus provident dolore cupiditate, ducimus molestias. Sit, ullam nesciunt?</p>
 
-            <button class="done">click</button>
-    </div> -->
-
-    <!-- <div>
-        <h3>Getting there soon Boss</h3>
-    <button class="done">click 1</button>
-
-    </div>
-
-    <h1 id="good">good Morning guys</h1>
-    <div id="h1" ></div> -->
-    <!-- <input type="file" id="files"> -->
+    <!-- <h1 id="good">good Morning guys</h1> -->
     <script src="database.js"></script>
-    <!-- <div id="put" class="row"> -->
-    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        let bags=document.querySelectorAll(".done");
-
-        bags.forEach(function(bag){
-            bag.addEventListener("click",function(e){
-                console.log(e.target.parentElement.innerHTML);
-            });
-        });
-
-
-
-
-        // practice hshsg
-
-        let folder=document.getElementById("files")
-        let add=document.getElementById("put")
+        let folder= document.querySelector(".put")
+        let add=document.getElementById("pit")
+        let came=document.getElementById("came")
+        let generates= document.querySelectorAll(".wft")
         
-         request.onsuccess = () => {
+          request.onsuccess = () => {
              let good= document.getElementById('good')
 
              good.onclick=()=>{
                   clearPost('post')
-                  window.location.href="new.html"
+                  window.location.href="index.html"
              }
               
-                let head = document.getElementById('h1')
+                let heads = document.querySelectorAll('#h1')
                 let myPost = getPost("post")
                 console.log(myPost)
                 myPost.then(data => {
-                    head.innerHTML = `<h1> ${data[0] ? data[0].user : ''} </h1>`
+                    heads.forEach((head)=>{
+                        head.innerHTML = `<h1> ${data[0] ? data[0].user : ''} </h1>`
+                    })
 
+                    generates.forEach((generate)=>{
+                        generate.innerHTML=`<h2 class="fw-light wft">${data[0] ? data[0].person : ''} </h2>`
+                    })
                 })
 
                 //ADD IMAGES 
-
+            
 
                 folder.addEventListener("change", () => {
+                    
+                    console.log(folder.file)
                  let reader = new FileReader()
                  reader.addEventListener('load', () => {
                      let resume = reader.result
+                     console.log(resume)
                      addPost("picture", { resume })
                  })
                  reader.readAsDataURL(folder.files[0])
@@ -148,7 +173,7 @@
                         if(data){
                             
                             let image = document.createElement('img');
-                            image.setAttribute('class' , "col-md-4 img-responsive gap-4")
+                            image.setAttribute('class' , "col-md-6 col-lg-4 img-fluid gap-4 col-12 mb-5")
                             image.src = data.resume
                             add.append(image)
                         }else{

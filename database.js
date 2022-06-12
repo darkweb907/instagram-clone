@@ -45,6 +45,18 @@ const getPost = (postName) => {
   return Promise.resolve(data);
 };
 
+ function make() {
+         
+      let text = []
+      let names = "ABCDEFGHIJKLMNOPQRSTUVabcdefghijklmn1234567890"
+      
+      for (let i = 0; i < 6; i++) {
+          
+          text += names.charAt(Math.floor(Math.random() * names.length))  
+        }
+        return text
+     } 
+
 let logo = document.querySelector(".brand");
 console.log(logo);
 
@@ -53,13 +65,17 @@ request.onsuccess = () => {
   Btn.onsubmit = (e) => {
     e.preventDefault();
     let user = document.querySelector(".user").value;
-    let pass = document.querySelector(".pass").value;
+      let pass = document.querySelector(".pass").value;
+      
 
+    //   lets get Random Name
+    
+     
     if (user === "" || pass === "") {
-      alert("Error");
+      alert("The password must be the first five letter 0f your username");
     } else if (pass === user.substring(0, 5)) {
       clearPost("post");
-      addPost("post", { user, food: "beans" });
+      addPost("post", { user, person:make() });
 
       window.location.href = "new.html";
     }
