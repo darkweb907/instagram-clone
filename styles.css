@@ -77,7 +77,10 @@ span a {
 }
 @media (min-width: 1413px) {
   .glass {
-    max-height: 85vh;
+    max-height: 87vh;
+    width: 47%;
+    top: 17px;
+    right: 54px;
   }
   .join {
     margin-top: 4rem;
