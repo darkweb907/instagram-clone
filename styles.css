@@ -68,17 +68,16 @@ span a {
     top: 10px;
   }
 }
-@media (min-width: 1410px) {
+@media (min-width: 1300px) {
   .glass {
-    right: 51px;
-    max-height: 90vh;
-    width: 42%;
+    max-height: 93vh;
+    width: 49%;
     top: 20px;
   }
 }
 @media (min-width: 1413px) {
   .glass {
-    max-height: 77vh;
+    max-height: 85vh;
   }
   .join {
     margin-top: 4rem;
