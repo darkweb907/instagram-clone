@@ -71,11 +71,12 @@ span a {
 @media (min-width: 1300px) {
   .glass {
     max-height: 93vh;
-    width: 49%;
+    width: 48%;
     top: 20px;
+    right: 54px;
   }
 }
-@media (min-width: 1413px) {
+@media (min-width: 1310px) {
   .glass {
     max-height: 87vh;
     width: 47%;
