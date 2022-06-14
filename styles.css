@@ -13,6 +13,7 @@ img {
 
 .phone img {
   position: absolute;
+  min-width: 122%;
 }
 .p-6 {
   padding: 5rem;
@@ -52,37 +53,11 @@ span a {
     top: 10px;
   }
 }
-@media (min-width: 1003px) {
-  .glass {
-    right: 49px;
-    max-height: 79vh;
-    width: 57%;
-    top: 10px;
+@media (min-width: 1000px) {
+  .phone img {
+    min-width: 80%;
   }
-}
-@media (min-width: 1274px) {
-  .glass {
-    right: 42px;
-    max-height: 79vh;
-    width: 51%;
-    top: 10px;
-  }
-}
-@media (min-width: 1300px) {
-  .glass {
-    max-height: 93vh;
-    width: 48%;
-    top: 20px;
-    right: 54px;
-  }
-}
-@media (min-width: 1310px) {
-  .glass {
-    max-height: 87vh;
-    width: 47%;
-    top: 17px;
-    right: 54px;
-  }
+
   .join {
     margin-top: 4rem;
   }
