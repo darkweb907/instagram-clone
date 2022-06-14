@@ -1,4 +1,4 @@
-let loader = document.querySelector(".loader");
+let loader = document.querySelector("#loader");
 
 window.onload = () => { 
   loader.style.display = "none";
