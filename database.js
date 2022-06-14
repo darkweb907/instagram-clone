@@ -1,3 +1,12 @@
+let loader = document.querySelector(".loader");
+
+window.onload = () => { 
+  loader.style.display = "none";
+};
+
+
+//loader first page
+
 let request = indexedDB.open("instagram", 3);
 
 request.onupgradeneeded = () => {
