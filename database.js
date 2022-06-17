@@ -1,9 +1,46 @@
-let loader = document.querySelector("#loader");
+let loader = document.querySelector(".loader");
+
 
 window.onload = () => { 
   loader.style.display = "none";
 };
 
+let instagramPost = [{
+  profile: "img/dark.jpg",
+  design:"img/dish.jpg",
+  description: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut",
+},
+  {
+    profile: "img/ben.jpg",
+    design:"img/burger.jpg",
+    description: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    profile: "img/pot.jpg",
+    design:"img/design.jpg",
+    description : "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  },
+  {
+    profile: "img/christ.jpg",
+    description: "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+  },
+  {
+    profile: "img/foto.jpg",
+    design: "img/howel.jpg",
+    description:  "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+  },
+  {
+    profile: "img/mike.jpg",
+    design: "img/ford.jpg",
+    description:"enim et ex nulla\nomnis voluptas quia qui\nvoluptatem consequatur numquam aliquam sunt\ntotam recusandae id dignissimos aut sed asperiores deserunt"
+  },
+  {
+    profile: "img/marcos-paulo-prado-QYVCzK-bnYU-unsplash.jpg",
+    design: "img/tab.jpg",
+    description:"alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
+  },
+ 
+]
 
 //loader first page
 
@@ -84,9 +121,9 @@ request.onsuccess = () => {
       alert("The password must be the first five letter 0f your username");
     } else if (pass === user.substring(0, 5)) {
       clearPost("post");
-      addPost("post", { user, person:make() });
+      addPost("post", { user, instagramPost, person:make() });
 
-      window.location.href = "new.html";
+      window.location.href = "Home/Home.html";
     }
   };
 };

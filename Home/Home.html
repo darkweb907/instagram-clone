@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <header class="py-3 shadow-lg">
+        <div class="container-lg">
+            <nav class="d-flex justify-content-between align-items-center">
+                <div class="logo" data-aos="fade-down" data-aos-duration="2000">
+                    <a href="#"><img src="../img/instagram.png" alt="" class="img-fluid insta"></a>
+                </div>
+                <div class="search d-none d-md-flex position-relative" data-aos="fade-down" data-aos-delay="2000"
+                    data-aos-duration="2000">
+                    <i class="fa fa-1x fa-search align-self-center position-absolute" style="left: 12px;"></i>
+                    <div class="col-12">
+                        <input type="search" class="form-control" placeholder="Search">
+                    </div>
+                </div>
+                <div class="icon d-flex gap-lg-5 gap-3" data-aos="fade-up" data-aos-delay="2000" data-aos-duration="2000">
+                    <i class="fa fa-2x fa-home bg"></i>
+                    <i class="fa fa-2x fa-comment-o bg"></i>
+                    <i class="fa fa-2x fa-compass"></i>
+                    <i class="fa fa-2x fa-heart-o"></i>
+                   <a href="../new.html"><i class="fa fa-2x fa-user-circle"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="first">
+          <div class="container" id="dev">
+            
+          </div>
+        </section>
+    </main>
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../database.js"></script>
+    <script src="../bootstrap.bundle.min.js"></script>
+    <script>
+       request.onsuccess=()=>{
+         getPost("post").then((data) => {
+            let show= data[0].instagramPost
+           show.forEach(dat => {
+            let dev=document.getElementById("dev")
+            const {profile, description, design}= dat
+            console.log(profile)
+             let cart = document.createElement("div")
+             cart.setAttribute("class", "mb-5")
+            
+            cart.innerHTML =`<div class="tool d-flex align-items-center justify-content-between">
+                <div class="prof d-flex gap-3 align-items-center">
+                    <img src= "../${profile}" class="img-responsive eli rounded-circle" alt="elizabeth">
+                    <h4>Elizabeth</h4>
+                </div>
+                <i class="fa fa-2x fa-ellipsis-v"></i>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body p-0">
+                    <div class="card-img">
+                        <img src="../${design}" class="img-fluid" alt="">
+                    </div>
+                    <div class="card-link p-2 gap-3 d-flex">
+                        <i class="fa fa-2x fa-heart-o"></i>
+                        <i class="fa fa-2x fa-comment-o"></i>
+                        <i class="fa fa-2x fa-reply-all"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="texting">
+                <p class="display-6">${description}</p>
+            </div>`
+            dev.append(cart)
+           });
+           })
+       }
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
