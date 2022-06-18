@@ -51,7 +51,7 @@
             let show= data[0].instagramPost
            show.forEach(dat => {
             let dev=document.getElementById("dev")
-            const {profile, description, design}= dat
+            const {profile, description, design , name}= dat
             console.log(profile)
              let cart = document.createElement("div")
              cart.setAttribute("class", "mb-5")
@@ -59,7 +59,7 @@
             cart.innerHTML =`<div class="tool d-flex align-items-center justify-content-between">
                 <div class="prof d-flex gap-3 align-items-center">
                     <img src= "../${profile}" class="img-responsive eli rounded-circle" alt="elizabeth">
-                    <h4>Elizabeth</h4>
+                    <h4>${name}</h4>
                 </div>
                 <i class="fa fa-2x fa-ellipsis-v"></i>
             </div>
