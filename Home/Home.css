@@ -44,7 +44,17 @@ h2 {
 .display-6 {
   font-size: 0.9rem;
 }
+.choose {
+  height: 50vh;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
 @media (min-width: 768px) {
+  .choose {
+    width: auto;
+    height: auto;
+  }
   .fa-2x {
     font-size: 2rem;
   }

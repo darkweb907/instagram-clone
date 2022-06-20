@@ -23,6 +23,11 @@ h4 {
 h2 {
   font-size: 1.3rem;
 }
+.all {
+  height: 50vh;
+  object-fit: cover;
+  object-position: top;
+}
 .prof {
   height: 90px;
   border-radius: 50%;
@@ -60,6 +65,9 @@ h2 {
 }
 
 @media (min-width: 768px) {
+  .all {
+    height: auto;
+  }
   .w-30 {
     left: 50px;
     right: 50px;
