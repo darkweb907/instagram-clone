@@ -26,6 +26,7 @@ let instagramPost = [{
   {
      name: "Gucci mane",
     profile: "img/christ.jpg",
+    design: "img/paw.jpg",
     description: "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
   },
   {
